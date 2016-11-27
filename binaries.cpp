@@ -24,17 +24,21 @@ int main(){
         {
 //            if (bin[i] == 1  && count == 0)
 //                count++;
-            if ((bin[i] == bin[i-1] || count == 0) && bin[i] == 1)
+            if ((bin[i] == bin[i+1] || count == 0) && bin[i] == 1)
                 count++;
             else if (count > aux)
                 {
                     aux = count;
                     count = 0;
                 }
+                //cout << bin[i];
 
         }
-        //cout << bin[i];
+
+    if (aux > count)
         cout << aux;
+    else
+        cout << count;
 
 
 
