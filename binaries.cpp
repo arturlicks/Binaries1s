@@ -5,6 +5,7 @@ using namespace std;
 
 vector <int> bin;
 
+//function to convert a decimal number to a binary
 void tobin(int n)
     {
     if (n > 0)
@@ -22,8 +23,6 @@ int main(){
 
     for (int i=bin.size() - 1; i >= 0; i-- )
         {
-//            if (bin[i] == 1  && count == 0)
-//                count++;
             if ((bin[i] == bin[i+1] || count == 0) && bin[i] == 1)
                 count++;
             else if (count > aux)
@@ -35,16 +34,11 @@ int main(){
             {
                 count = 0;
             }
-                //cout << bin[i];
-
         }
 
     if (aux > count)
         cout << aux;
     else
         cout << count;
-
-
-
     return 0;
 }
