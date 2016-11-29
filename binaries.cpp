@@ -31,6 +31,10 @@ int main(){
                     aux = count;
                     count = 0;
                 }
+            else if (bin[i] == 0)
+            {
+                count = 0;
+            }
                 //cout << bin[i];
 
         }
